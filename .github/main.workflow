@@ -16,8 +16,8 @@ action "lint" {
 
 action "test" {
   needs = ["lint"]
-  uses = "actions/npm@master"
-  args = ["test"]
+  uses = "eirslett/chrome-karma-docker/docker/dev"
+  runs = ["npm", "test"]
 }
 
 action "test:coverage" {
