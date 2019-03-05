@@ -16,7 +16,7 @@ action "lint" {
 
 action "test" {
   needs = ["lint"]
-  uses = "eirslett/chrome-karma-docker/docker/dev"
+  uses = "eirslett/chrome-karma-docker/docker/dev@master"
   runs = ["npm", "test"]
 }
 
